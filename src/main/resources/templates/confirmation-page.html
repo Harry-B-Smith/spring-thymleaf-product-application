@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Confirmation Page</title>
+</head>
+<body>
+	
+	
+	<section class="main-contaner">
+
+
+		<header>
+			<h1>Product Added!</h1>
+			<a href="/">Return to Home Page</a>
+		</header>
+
+		
+		
+		<div class="eachProduct" th:object="${product}">
+		<h2>The <span th:text="*{name}"></span> Product</h2>
+			<ul>
+				<li th:text="*{description}"></li>
+				<li th:text="*{make}"></li>
+				<li th:text="*{supplier}"></li>
+				<li th:text="*{price}"></li>
+			</ul>
+		
+		</div>
+
+	
+	</section>
+	
+</body>
+</html>
